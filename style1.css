@@ -1,0 +1,463 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.bg-img{
+    height: 100%;
+    width: 100%;
+    background-image:
+            url("bgimg.jpg");
+    background-size: cover;
+    margin:0;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.menu{
+    width:400px;
+    float:right;
+    height: 70px;
+    margin-right: 20vh;
+    margin-top: 5vh;
+    margin-left: 20vh;
+}
+
+ul{
+    float: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+}
+.nav-content{
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+    margin-left: 30px;
+    padding:2px;
+    margin-top: 3px;
+    font-weight: bolder;
+}
+
+.nav-content:hover {
+    color: grey;
+}
+.navbar{
+    background-color: #1c1c1c;
+    width:100%;
+    height:14vh;          
+    position: fixed;          
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display:flex;
+    gap:40px;
+    padding:10px 20px;            
+}
+
+.navbar img {
+    height: 80px;   
+    width: 18vh;    
+    margin-right: 20px; 
+    vertical-align: middle;
+    background: none;
+    margin-left: 20px;
+    mix-blend-mode: screen;   
+}
+
+.flashcard {
+    border: 1px solid black;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+    height: 50vh;
+    width: 50vh;
+    position: absolute;      
+    top: 10px;                
+    left: 10px;   
+    margin-top: 30vh;           
+}
+
+.search-bar {
+    border-radius: 20px;
+    height: 40px;
+    width: 45vh;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px; 
+    margin-left: 10vh;
+    margin-top: 15px;
+}
+
+.genre-dropdown {
+    border-radius: 20px;
+    background-color: grey;
+    color: white;
+    height:30px;
+    width:20vh;
+    align-items: center;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 12vh;
+}
+.genre-dropdown:hover {
+    background-color: darkgrey;
+}
+
+#genre{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.search-btn{
+    border-radius: 20px;
+    height:40px;
+    width:45vh;
+    margin-top: 15px;
+    background-color: grey;
+    color:white;
+}
+
+.search-btn:hover{
+    background-color: black;
+}
+
+.camera{
+    width: 15vh;
+    height: 10vh;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.login{
+    border-radius: 10px;
+    height:30px;
+    width:30vh;
+    margin-top: 15vh;
+    background-color: white;
+    color:grey;
+    font-size: 20px;
+    margin-left: 155vh;
+}
+
+.signup{
+    border-radius: 10px;
+    height:30px;
+    width:30vh;
+    margin-top: 15px;
+    background-color: white;
+    color:grey;
+    font-size: 20px;
+    margin-left: 155vh;
+}
+
+.login:hover{
+    background-color: black;
+}
+.signup:hover{
+    background-color: black;
+}
+
+/*#tagline{
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 20px;
+    align-items: right;
+    margin-top: 35vh;
+    width:80vh;
+    margin-left: 110vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#tagline:hover{
+    background-color: grey;
+}*/
+h1{
+    font-size: 12vh;
+    color:white;
+    margin-left:65vh;
+    margin-top: 14vh;
+    font-family:'Times New Roman', Times, serif;
+}
+p{
+    font-size: 4vh;
+    color:white;
+    margin-left: 65vh;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.movies {
+    height: 40vh;
+    width: 60vh;
+    border: #1c1c1c;
+    border-radius: 20px;
+}
+
+.movie-container {
+    width: 90%;        /* show bigger slider */
+    overflow: hidden;  
+    border-radius: 12px;
+    position: relative; /* needed for buttons */
+    margin-top: 10vh;
+    margin-left: 10vh;
+}
+
+.movie-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* smooth slide effect */
+    margin:10px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    gap:20px;
+}
+
+.movies {
+    width:25vh;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#h1heading{
+    margin-top: 30vh;
+    font-size: 50px;
+    margin-left: 40vh;
+}
+#para{
+    font-size: 20px;
+}
+
+.movies:hover{
+    transform: scale(1.05);  /* zoom effect on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+.card{
+    height:50vh;
+    width:30vh;
+    cursor:pointer;
+    padding:10px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    background-color: black;
+    border: 1px solid black;
+    flex-direction: column;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    perspective: 1000px;
+}
+
+h2{
+    margin-top: 7px;
+    font-size: 24px;
+    color: gold;
+    font-weight: bold;
+}
+
+.trailer{
+    background-color: #1c1c1c;
+    color:rgb(89, 152, 245);
+    border:2px solid rgb(89, 152, 245);
+    margin-top: 5vh;
+    padding:10px;
+}
+#trailer:hover{
+    transform: scale(1.05);  /* zoom effect on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+.flashcards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+#ur-heading {
+    font-size: 10vh;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right:60vh;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid rgb(89, 152, 245);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-img {
+    height: 150px;
+    width: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 15px; /* rectangle poster instead of circle */
+}
+
+.review {
+    flex: 1;
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.review-button {
+    align-self: flex-start; /* aligns under the text */
+    margin-top: 10px;
+    padding: 8px 15px;
+
+    background-color: #1c1c1c;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-button:hover {
+    background-color: #333;
+}
+
+
+.footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30vh;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%); /* makes icons white */
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons img:hover {
+    transform: scale(1.2); /* zoom effect */
+}
+footer p{
+    margin-right: 60vh;
+}
+#video{
+    height:30vh;
+    width:30vh;
+}
+
+.trailer-container {
+  margin-left:20px;
+  margin-top: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+.trailer{
+  margin-left:80px;
+  margin-top: 20px;
+  border-radius: 15px;
+  gap:20px;
+}
+#login{
+    height:5vh;
+    width:20vh;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+#signup{
+    height:5vh;
+    width:10vh;
+    border-radius: 10px;
+}
+#login:hover{
+    background-color: grey;
+}
+#signup:hover{
+    background-color: grey;
+}
+
+
+
+
